@@ -772,9 +772,7 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
                                 {...swiperProps}
                                 allowMouseEvents={this.props.emulateTouch}
                             >
-                                {this.props.infiniteLoop && lastClone}
                                 {this.renderItems()}
-                                {this.props.infiniteLoop && firstClone}
                             </Swipe>
                         ) : (
                             <ul
@@ -782,9 +780,7 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
                                 ref={(node: HTMLUListElement) => this.setListRef(node)}
                                 style={this.state.itemListStyle || {}}
                             >
-                                {this.props.infiniteLoop && lastClone}
                                 {this.renderItems()}
-                                {this.props.infiniteLoop && firstClone}
                             </ul>
                         )}
                     </div>
